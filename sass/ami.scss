@@ -1,0 +1,46 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "box";
+
+//Variables
+$my_color: #BADA55;
+$div_font_color : #a12;
+$div_color : #d45;
+$margin_all_over_app : 50px;
+
+nav {
+  margin:$margin_all_over_app;
+  a{
+    color: $my_color;
+    &:hover {
+      color: darken($my_color, 20%);
+    }
+  }
+}
+
+div
+{
+  margin:$margin_all_over_app;
+  color:$div_color;
+  &:hover {
+    color: shade($div_font_color, 20%);
+
+  }
+  a {
+    color: $div_font_color;
+    &:hover {
+      color: lighten($div_font_color, 20%);
+
+    }
+  }
+}
+
+.box
+{
+  //Mixin is used here
+  @include box(110px, 10px, #BADA55)
+}
